@@ -1,69 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#FFF"
     android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
     android:padding="5dp"
     android:stretchColumns="1,2,3">
 
     <TableRow
+        android:id="@+id/tableRow0"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableRow0">
+        android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/billTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bill total"
-            android:id="@+id/billTextView" />
+            android:text="Bill total" />
 
         <EditText
+            android:id="@+id/billEditText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/billEditText" />
+            android:layout_height="wrap_content" />
     </TableRow>
 
     <TableRow
+        android:id="@+id/tableRow1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableRow1">
+        android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tenTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10%"
-            android:id="@+id/tenTextView"/>
+            android:text="10%" />
 
         <TextView
+            android:id="@+id/fifteenTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15%"
-            android:id="@+id/fifteenTextView"/>
+            android:text="15%" />
 
         <TextView
+            android:id="@+id/twentyTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20%"
-            android:id="@+id/twentyTextView"/>
+            android:text="20%" />
     </TableRow>
 
     <TableRow
+        android:id="@+id/tableRow2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableRow2"></TableRow>
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip" />
+
+        <EditText
+            android:id="@+id/tip10EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/tip15EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/tip20EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </TableRow>
 
     <TableRow
+        android:id="@+id/tableRow3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableRow3"></TableRow>
+        android:layout_height="wrap_content"></TableRow>
 
     <TableRow
+        android:id="@+id/tableRow4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableRow4"></TableRow>
+        android:layout_height="wrap_content"></TableRow>
 
     <TableRow
+        android:id="@+id/tableRow5"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableRow5"></TableRow>
+        android:layout_height="wrap_content"></TableRow>
 </TableLayout>
