@@ -18,9 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:padding="5dp"
             android:paddingRight="5dp"
-            android:text="Bill total"
+            android:text="@string/billTotal"
             android:textColor="#000" />
 
         <EditText
@@ -79,41 +78,44 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="5dp"
-            android:text="Tip"
+            android:text="@string/tip"
             android:textColor="#000" />
 
         <EditText
             android:id="@+id/tip10EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/tip15EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/tip20EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
     </TableRow>
 
     <!-- tableRow3 -->
@@ -128,41 +130,44 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="5dp"
-            android:text="Total"
+            android:text="@string/total"
             android:textColor="#000" />
 
         <EditText
             android:id="@+id/total10EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/total15EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/total20EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
     </TableRow>
 
     <!-- tableRow4 -->
@@ -175,10 +180,11 @@
             android:id="@+id/customTextView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:focusable="false"
             android:gravity="right|center_vertical"
-            android:paddingRight="5dp"
             android:paddingBottom="5dp"
-            android:text="Custom"
+            android:paddingRight="5dp"
+            android:text="@string/custom"
             android:textColor="#000" />
 
         <SeekBar
@@ -186,23 +192,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_span="2"
-            android:progress="18"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:paddingBottom="5dp"
-            android:focusable="false"
-            android:layout_weight="1" />
+            android:progress="18" />
 
         <TextView
             android:id="@+id/customTipTextView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="false"
             android:gravity="center_vertical"
-            android:paddingLeft="5dp"
             android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
             android:text="18%"
-            android:textColor="#000"
-            android:layout_weight="1" />
+            android:textColor="#000" />
     </TableRow>
 
     <!-- tableRow5 -->
@@ -217,39 +223,41 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:paddingRight="5dp"
-            android:text="Tip"
+            android:text="@string/tip"
             android:textColor="#000" />
 
         <EditText
             android:id="@+id/tipCustomEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/totalCustomTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="right"
             android:paddingRight="5dp"
-            android:text="Total"
-            android:textColor="#000"
-            android:layout_weight="1" />
+            android:text="@string/total"
+            android:textColor="#000" />
 
         <EditText
             android:id="@+id/totalCustomEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="14sp"
-            android:focusable="false"
-            android:longClickable="false"
+            android:layout_weight="1"
             android:cursorVisible="false"
-            android:layout_weight="1" />
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textSize="14sp" />
     </TableRow>
 </TableLayout>
