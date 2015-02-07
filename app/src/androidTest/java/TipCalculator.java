@@ -78,6 +78,84 @@ public class TipCalculator extends Activity {
 
         // get the SeekBar used to set the custom tip amount
         SeekBar customSeekBar = (SeekBar) findViewById(R.id.customSeekBar);
+        customSeekBar.setOnSeekBarChangeListener(customSeekBarListener);
+    } // end method onCreate
 
-    }
+    // updates 10, 15 and 20 percent tip EditTexts
+    private void updateStandard() {
+        // calculate bill total with a ten percent tip
+        double tenPercentTip = currentBillTotal * .1;
+        double tenPercentTotal = currentBillTotal + tenPercentTip;
+
+        // set tipTenEditText's text to tenPercentTip
+        tip10EditText.setText(String.format("%.02f", tenPercentTip));
+
+        // set totalTenEditText's text to tenPercentTotal
+        total10EditText.setText(String.format("%.02f", tenPercentTotal));
+
+        // calculate bill total with a fifteen percent tip
+        double fifteenPercentTip = currentBillTotal * .15;
+        double fifteenPercentTotal = currentBillTotal + fifteenPercentTip;
+
+        // set tipFifteenEditText's text to fifteenPercentTip
+        tip15EditText.setText(String.format("%.02f", fifteenPercentTip));
+
+        // set totalFifteenEditText's text to fifteenPercentTotal
+        total15EditText.setText(String.format("%.02f", fifteenPercentTotal));
+
+        // calculate bill total with a twenty percent tip
+        double twentyPercentTip = currentBillTotal * .20;
+        double twentyPercentTotal = currentBillTotal + twentyPercentTip;
+
+        // set tipTwentyEditText's text to twentyPercentTip
+        tip20EditText.setText(String.format("%.02f", twentyPercentTip));
+
+        // set totalTwentyEditText's text to twentyPercentTotal
+        total20EditText.setText(String.format("%.02f", twentyPercentTotal));
+    } // end method updateStandard
+
+    // updates the custom tip and total EditTexts
+    private void updateCustom(){
+        // set customTipTextView's text to match the position of the SeekBar
+        customTipTextView.setText(currentCustomPercent + "%");
+
+        // calculate the custom tip amount
+        double customTipAmount = currentBillTotal * currentCustomPercent * .01;
+
+        // calculate the total bill, including the custom tip
+        double customTotalAmout = currentBillTotal + customTipAmount;
+
+        // display the tip and total bill amounts
+        tipCustomEditText.setText(String.format("%.02f", customTipAmount));
+        totalCustomEditText.setText(String.format("%.02f", customTotalAmout));
+    } // end method updateCustom
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putDouble( BILL_TOTAL, currentBillTotal);
+        outState.putInt( CUSTOM_PERCENT, currentCustomPercent);
+    } // end method onSaveInstanceState
+
+    // called when the user changes the position of SeekBar
+    private OnSeekBarChangeListener customSeekBarListener = new OnSeekBarChangeListener() {
+        // update currentCustomPercent, then call updateCustom
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            // sets currentCustomPercent to position of the SeekBar's thumb
+            currentCustomPercent = seekBar.getProgress();
+            updateCustom(); // update EditTexts for custom tip and total
+        } // end the method onProgressChanged
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+
+        } // end method onStartTrackingTouch
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+
+        } // end method onStopTrackingTouch
+    }; // end OnSeekBarChangeListener
 }
